@@ -1,2 +1,11 @@
 # HPDF-TASK-1
-The Repo for The Task-1 
+The repo for HPDF.<br>
+
+
+## Install
+
+`npm install`
+
+## Usage
+
+`npm start` 
