@@ -2,22 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import img from './images/nbalogo.png'
 import curry from './images/curry.jpg'
 import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
 import messi from './images/messi.jpg'
-import ozil from './images/download.png'
-import ronaldoBall from './images/old.jpg'
+import messi1 from './images/messi1.jpg'
+import ozil from './images/ozil.jpg'
+import ronaldoBall from './images/ozil1.jpg'
 import CommentIcon from 'material-ui/svg-icons/communication/comment'
 import {orange500, blue500, red500, green500} from 'material-ui/styles/colors';
 import RetweetIcon from 'material-ui/svg-icons/av/repeat';
 import LikeIcon from 'material-ui/svg-icons/action/thumb-up';
 import griezmann from './images/griezmann.jpg'
 import ronaldo from './images/ronaldo.jpg'
-import aadhar from './images/aadhar.jpg'
 import './style.css';
 
 const rowStyle = {
@@ -44,17 +43,11 @@ const style3 = {
   display: 'inline-block',
 };
 const firstPaper = {
-  height: 220,
+  height: 200,
   width: 275,
   marginLeft: 30,
   marginRight:0,
-  marginBottom:15,marginTop:15
-};
-const serPaper = {
-  height: 50,
-  width: 275,
-  marginLeft: 30,
-  marginRight:0,
+  
   marginBottom:15,marginTop:15
 };
 
@@ -70,8 +63,7 @@ const timelinePaper = {
 }
 const liHashStyle = {
     color: '#1DA1F2',
-    fontWeight:'bold',
-    fontSize:13
+    fontWeight:'bold'
 }
 const liTweetStyle = {
     fontSize: 10
@@ -90,36 +82,22 @@ const inputElement = {
 
 
 const CardExampleWithAvatar = () => (
-  <div  style={{overflow:'hidden'}}>
-    <div  style={{float:'left',width:'25%'}}>
-              <Paper style={serPaper} zDepth={1} >
-              <div style={{paddingTop:10}}>
-                <span style={{marginBottom:0,marginLeft:10,marginTop:25,paddingTop:20,fontSize:20,fontWeight:'bold'}}>Search filters.</span>
-                <span style={{fontSize:10,color:'#1DA1F2',marginLeft:5}} className='list'  >show </span>
-                </div>
-              </Paper>
-              <Paper style={firstPaper} zDepth={1} >
-              <h3 style={{marginBottom:0,marginLeft:10,marginTop:15,paddingTop:15}}>Related searches</h3>
-              <ul  style={{listStyleType: 'none',
-                marginLeft:5 ,
-                padding: 0,
-                float:'left'}}>
-                <li className='list' style={liHashStyle}>Arsenal</li>
-                
-                <br/>
-                <li className='list' style={liHashStyle}>Ozil</li>
-                
-                <br/>
-                <li className='list' style={liHashStyle}>CR7</li>
-                
-                <br/>
-                <li className='list' style={liHashStyle}>Laca</li>
-                
-                <br/>
-                <li className='list' style={liHashStyle}>Messi</li>
-                
-              </ul>
-            </Paper>
+  <div  style={{overflow:'hidden',clear:'right'}}>
+    <div  style={{float:'left',width:'26%'}}>
+          <Paper style={firstPaper} zDepth={1} >
+            <div style={{backgroundColor:'#1DA1F2',width:275,height:100}}>
+                <div><Avatar src={curry} style={{marginLeft:5,marginTop:73,border: 0, objectFit: 'cover'}} size={50} /></div>
+            </div>
+            <div className='list'>
+              <h4 style={{textAlign:'center',marginTop:5,marginLeft:10,marginBottom:8,lineHeight:'90%'}} >Stephen Curry</h4>
+              <span style={{textAlign:'center',margin:0, display:'block',lineHeight:'0%',paddingRight:0, fontSize: 13,color:'B2B2B2'}} >@StephenCurry30</span>
+            </div>
+            <div style={{marginTop:20,marginLeft:20,fontSize: 13}} >
+              <div className='list' style={{float:'left',width:'33%',color:'#939393'}} >Tweets<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:14, fontSize: 18,color:blue500}} >6,819</span></div>
+              <div className='list' style={{display:'inline-block',width:'33%',color:'#939393'}} >Following<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:18, fontSize: 20,color:blue500}} >713</span></div>
+              <div className='list' style={{float:'right',width:'33%',color:'#939393',onHover:blue500}} >Followers<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:18, fontSize: 20,color:blue500}} >11.7M</span></div>
+            </div>
+          </Paper>
 
           <Paper style={style2} zDepth={1} >
             <h3 style={{marginBottom:0,marginLeft:10}}>Treads for you</h3>
@@ -144,21 +122,25 @@ const CardExampleWithAvatar = () => (
             </ul>
           </Paper>
     </div> 
-    <div style={{display:'inline-block',width:'18%',marginRight:0}} >
-          
-          <Card style={{width:650,marginTop:15}}>
+    <div style={{display:'inline-block',width:'16%',marginRight:0}} >
+          <Paper style={whatsHappeningPaper} zDepth={1} > 
+              <Avatar src={curry}  size={30} style={{marginLeft:15,marginTop:10,border: 0, objectFit: 'cover'}} />
+              <input type="text" placeholder="What's happening?" style={inputElement}/>
+          </Paper> 
+          <Card style={{width:650,border: 0, objectFit: 'cover'}}>
             <CardHeader
-              title="Beebom"
-              subtitle="@beebomco"
-              avatar={ozil}
+              title="Lionel Messi"
+              subtitle="@TeamMessi"
+              avatar={messi}
               showExpandableButton={true}
                           />
             <CardText>
-            65-year-old Sajidha Begum has lost her sight and fingers, and she has no way of submitting the necessary fingerprints and iris scans.
-<br/>In August, however, the Indian government sent a letter to her saying her pension was being taken away unless it was linked to an <b>Aadhaar</b> card. 
+            Lace up like Leo.<br/>
+The ultimate stage awaits.⚽⚡ <br/>
+<span className='list'>#NEMEZIZ #HereToCreate</span>
             </CardText>              
             <CardMedia>
-              <img src={ronaldoBall} alt="" />
+              <img src={messi1} alt="" />
             </CardMedia>
             
             <CardActions>
@@ -169,18 +151,16 @@ const CardExampleWithAvatar = () => (
           </Card>
           <Card style={{width:650}}>
             <CardHeader
-              title="Kiran Jonna"
-              subtitle="@jackerHacker"
+              title="Mesut Ozil"
+              subtitle="@MesutOzil1088"
               avatar={ozil}
               showExpandableButton={true}
                           />
             <CardText>
-            What’s this? UIDAI is finally admitting that the technology they’ve used ALL these years was putting the privacy of residents at risk?<br/>
-            
-            News flash: even the new registered device mechanism doesn’t do much to mitigate the privacy risk of biometrics in <b>Aadhaar</b>.
+            YA GUNNERS YA! 😎 Massive derby win 👊🏼💥 NORTH LONDON. IS. RED. 🔴 #COYG @Arsenal @premierleague
             </CardText>              
             <CardMedia>
-              <img src={aadhar} alt="" />
+              <img src={ronaldoBall} alt="" />
             </CardMedia>
             <CardActions>
               <CommentIcon hoverColor={blue500} style={{marginLeft:25,marginRight:30}}/>
@@ -189,41 +169,34 @@ const CardExampleWithAvatar = () => (
             </CardActions>
           </Card>
     </div>
-    <div  style={{float:'right',width:'26%',marginLeft:0}}>
+    <div id="whotofollow"  style={{float:'right',width:'25%',marginLeft:20,marginRight:0}}>
         <Paper style={style3} zDepth={1} >
-        <h3 style={{marginBottom:0,marginLeft:10}}>Who to follow</h3>
+        <span style={{marginBottom:10,marginLeft:15,marginTop:20,fontSize:20,fontWeight:'bold',display:'inline-block'}}>Who to follow</span>
+                <span style={{fontSize:12,color:'#1DA1F2',marginLeft:5}} className='list'  >Refresh  </span>
         <List>
           <ListItem
             primaryText="Cristiano Ronaldo"
             leftAvatar={<Avatar src={ronaldo} style={{border: 0, objectFit: 'cover'}} size={40} />}
-           
-          />
+           />
           <Divider />
           <ListItem
-            primaryText="Beebom"
+            primaryText="Mesut Ozil"
             leftAvatar={<Avatar src={ozil} style={{border: 0, objectFit: 'cover'}} size={40} />}
-            
-          />
+            />
           <Divider />
           <ListItem
             primaryText="Antonie Griezmann"
             leftAvatar={<Avatar src={griezmann} style={{border: 0, objectFit: 'cover'}} size={40} />}
-            
           />
           <Divider />
           <ListItem
             primaryText="Lionel Messi"
             leftAvatar={<Avatar src={messi} style={{border: 0, objectFit: 'cover'}} size={40} />}
-            
-          />
+            />
           
         </List>
-      
       </Paper>
-    
-    
     </div>    
-     
   </div>
 );
 
