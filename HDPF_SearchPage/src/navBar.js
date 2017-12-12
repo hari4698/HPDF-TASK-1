@@ -35,47 +35,17 @@ const sty = {
         marginTop:10,
         marginBottom:5,
         float: 'right',
-        };
 
-        class DialogExampleDialogDatePicker extends React.Component {
-            state = {
-              open: false,
-            };
-          
-            handleOpen = () => {
-              this.setState({open: true});
-            };
-          
-            handleClose = () => {
-              this.setState({open: false});
-            };
-          
-            render() {
-              const actions = [
-                <FlatButton
-                  label="Ok"
-                  primary={true}
-                  keyboardFocused={true}
-                  onClick={this.handleClose}
-                />,
-              ];
-          
-              return (
-                <div>
-                  <button className='btn' onClick={this.handleOpen} >Tweet</button>
-                  <Dialog
-                    title="Compose a new tweet"
-                    actions={actions}
-                    modal={false}
-                    open={this.state.open}
-                    onRequestClose={this.handleClose}
-                    bodyStyle={{clear:'right'}}
-                  >
-                  </Dialog>
-                </div>
-              );
-            }
-          }        
+        };
+        const searchBar= {
+          float:'right',borderRadius:25,border: '#FFFFFF',backgroundColor:'#f2f7ff',
+          marginTop:10,
+          width:220,
+          height:30,
+          paddingLeft: 10,
+          fontSize:12,
+          outline:'none'
+        }
 
 export default class NavBar extends React.Component{
     render(){
@@ -114,12 +84,10 @@ export default class NavBar extends React.Component{
                         <MenuItem primaryText="Keyboard shortcuts" />
                         <MenuItem primaryText="Log out" /> 
                     </IconMenu>
+                  
+                    <input className='searchBar' type="text" value="aadhaar" style={searchBar}/>
                     
-                    <TextField
-                        hintText="Search"
-                        underlineStyle={{borderColor: blue500}}
-                        style={{float: 'right'}}/> 
-                          
+                         
           </div>
         );
     }

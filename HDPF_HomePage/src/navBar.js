@@ -35,7 +35,17 @@ const sty = {
         marginTop:10,
         marginBottom:5,
         float: 'right',
+
         };
+        const searchBar= {
+          float:'right',borderRadius:25,border: '#FFFFFF',backgroundColor:'#f2f7ff',
+          marginTop:10,
+          width:220,
+          height:30,
+          paddingLeft: 10,
+          fontSize:12,
+          outline:'none'
+        }
 
         class DialogExampleDialogDatePicker extends React.Component {
             state = {
@@ -114,12 +124,10 @@ export default class NavBar extends React.Component{
                         <MenuItem primaryText="Keyboard shortcuts" />
                         <MenuItem primaryText="Log out" /> 
                     </IconMenu>
+                  
+                    <input className='searchBar' type="text" placeholder="Search Twitter" style={searchBar}/>
                     
-                    <TextField
-                        hintText="Search"
-                        underlineStyle={{borderColor: blue500}}
-                        style={{float: 'right'}}/> 
-                          
+                         
           </div>
         );
     }
