@@ -7,10 +7,10 @@ import Paper from 'material-ui/Paper';
 import Avatar from 'material-ui/Avatar';
 import {List, ListItem} from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import messi from './images/messi.jpg'
-import messi1 from './images/messi1.jpg'
+import messi from './images/download.png'
+import messi1 from './images/old.jpg'
 import ozil from './images/ozil.jpg'
-import ronaldoBall from './images/ozil1.jpg'
+import ronaldoBall from './images/aadhar.jpg'
 import CommentIcon from 'material-ui/svg-icons/communication/comment'
 import {orange500, blue500, red500, green500} from 'material-ui/styles/colors';
 import RetweetIcon from 'material-ui/svg-icons/av/repeat';
@@ -31,8 +31,18 @@ const style2 = {
   width: 275,
   marginLeft: 30,
   marginRight:0,
-  
+  marginBottom:15,
   display: 'inline-block',
+};
+const related = {
+  height: 225,
+  width: 275,
+  marginLeft: 30,
+  marginRight:0,
+  marginBottom:15,
+  display: 'inline-block',
+ 
+  paddingLeft:10
 };
 const style3 = {
   height: 300,
@@ -55,15 +65,18 @@ const whatsHappeningPaper = {
   height: 50,
   width: 650,
   marginTop:15,
-  backgroundColor:'#F2FAFE'
+  backgroundColor:'#F2FAFE',
+  
 };
-const timelinePaper = {
-  width: 650,
-  height:450
-}
+
 const liHashStyle = {
     color: '#1DA1F2',
     fontWeight:'bold'
+}
+const liHashStyle1 = {
+  color: '#1DA1F2',
+  fontWeight:'bold',
+  fontSize:14
 }
 const liTweetStyle = {
     fontSize: 10
@@ -77,27 +90,47 @@ const inputElement = {
  marginLeft:20,
   height:20,
   width:550,
-  online:'none'
+  outline:'none'
 }  
+const serPaper = {
+  height: 60,
+  width: 275,
+  marginLeft: 30,
+  marginRight:0,
+  
+  marginBottom:15,marginTop:15
+}
 
 
 const CardExampleWithAvatar = () => (
   <div  style={{overflow:'hidden',clear:'right'}}>
     <div  style={{float:'left',width:'26%'}}>
-          <Paper style={firstPaper} zDepth={1} >
-            <div style={{backgroundColor:'#1DA1F2',width:275,height:100}}>
-                <div><Avatar src={curry} style={{marginLeft:5,marginTop:73,border: 0, objectFit: 'cover'}} size={50} /></div>
-            </div>
-            <div className='list'>
-              <h4 style={{textAlign:'center',marginTop:5,marginLeft:10,marginBottom:8,lineHeight:'90%'}} >Stephen Curry</h4>
-              <span style={{textAlign:'center',margin:0, display:'block',lineHeight:'0%',paddingRight:0, fontSize: 13,color:'B2B2B2'}} >@StephenCurry30</span>
-            </div>
-            <div style={{marginTop:20,marginLeft:20,fontSize: 13}} >
-              <div className='list' style={{float:'left',width:'33%',color:'#939393'}} >Tweets<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:14, fontSize: 18,color:blue500}} >6,819</span></div>
-              <div className='list' style={{display:'inline-block',width:'33%',color:'#939393'}} >Following<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:18, fontSize: 20,color:blue500}} >713</span></div>
-              <div className='list' style={{float:'right',width:'33%',color:'#939393',onHover:blue500}} >Followers<br/><span style={{textAlign:'left',marginTop:10, display:'block',lineHeight:'0%',paddingRight:18, fontSize: 20,color:blue500}} >11.7M</span></div>
-            </div>
+          <Paper style={serPaper} >
+          <span style={{marginBottom:10,marginLeft:15,marginTop:20,fontSize:20,fontWeight:'bold',display:'inline-block'}}>Search Filters.</span>
+                <span style={{fontSize:12,color:'#1DA1F2',marginLeft:5}} className='list'  >Refresh  </span>
           </Paper>
+          <Paper style={related} zDepth={1} >
+          <h3 style={{marginBottom:0,marginLeft:10}}>Related searches</h3>
+          <ul  style={{listStyleType: 'none',
+            marginLeft:5 ,
+            padding: 0,
+            float:'left'}}>
+            <li className='list' style={liHashStyle1}>Arsenal</li>
+            
+            <br/>
+            <li className='list' style={liHashStyle1}>Ozil</li>
+            
+            <br/>
+            <li className='list' style={liHashStyle1}>#CR7</li>
+            
+            <br/>
+            <li className='list' style={liHashStyle1}>Laca</li>
+            
+            <br/>
+            <li className='list' style={liHashStyle1}>Messi</li>
+            
+          </ul>
+        </Paper>
 
           <Paper style={style2} zDepth={1} >
             <h3 style={{marginBottom:0,marginLeft:10}}>Treads for you</h3>
@@ -129,15 +162,15 @@ const CardExampleWithAvatar = () => (
           </Paper> 
           <Card style={{width:650,border: 0, objectFit: 'cover'}}>
             <CardHeader
-              title="Lionel Messi"
-              subtitle="@TeamMessi"
+              title="Beebom"
+              subtitle="@beebomco"
               avatar={messi}
               showExpandableButton={true}
                           />
             <CardText>
-            Lace up like Leo.<br/>
-The ultimate stage awaits.⚽⚡ <br/>
-<span className='list'>#NEMEZIZ #HereToCreate</span>
+            65-year-old Sajidha Begum has lost her sight and fingers, and she has no way of submitting the necessary fingerprints and iris scans.<br/><br/>
+            
+            In August, however, the Indian government sent a letter to her saying her pension was being taken away unless it was linked to an<b> Aadhaar</b> card. 
             </CardText>              
             <CardMedia>
               <img src={messi1} alt="" />
@@ -151,13 +184,15 @@ The ultimate stage awaits.⚽⚡ <br/>
           </Card>
           <Card style={{width:650}}>
             <CardHeader
-              title="Mesut Ozil"
-              subtitle="@MesutOzil1088"
-              avatar={ozil}
+              title="Kiran Jonna"
+              subtitle="@jackerhacker"
+              avatar={messi}
               showExpandableButton={true}
                           />
             <CardText>
-            YA GUNNERS YA! 😎 Massive derby win 👊🏼💥 NORTH LONDON. IS. RED. 🔴 #COYG @Arsenal @premierleague
+            What’s this? UIDAI is finally admitting that the technology they’ve used ALL these years was putting the privacy of residents at risk?
+
+<br/><br/>News flash: even the new registered device mechanism doesn’t do much to mitigate the privacy risk of biometrics in <b>Aadhaar</b>. 
             </CardText>              
             <CardMedia>
               <img src={ronaldoBall} alt="" />

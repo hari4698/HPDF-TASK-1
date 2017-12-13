@@ -47,6 +47,46 @@ const sty = {
           outline:'none'
         }
 
+        class DialogExampleDialogDatePicker extends React.Component {
+            state = {
+              open: false,
+            };
+          
+            handleOpen = () => {
+              this.setState({open: true});
+            };
+          
+            handleClose = () => {
+              this.setState({open: false});
+            };
+          
+            render() {
+              const actions = [
+                <FlatButton
+                  label="Ok"
+                  primary={true}
+                  keyboardFocused={true}
+                  onClick={this.handleClose}
+                />,
+              ];
+          
+              return (
+                <div>
+                  <button className='btn' onClick={this.handleOpen} >Tweet</button>
+                  <Dialog
+                    title="Compose a new tweet"
+                    actions={actions}
+                    modal={false}
+                    open={this.state.open}
+                    onRequestClose={this.handleClose}
+                    bodyStyle={{clear:'right'}}
+                  >
+                  </Dialog>
+                </div>
+              );
+            }
+          }        
+
 export default class NavBar extends React.Component{
     render(){
         return(
